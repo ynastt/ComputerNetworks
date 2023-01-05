@@ -1,0 +1,11 @@
+<!--файл шаблона html формы -->
+<h1>Редактировать {{.Title}}</h1>
+
+<form action="/save/{{.Title}}" method="post">
+	<div>
+		<textarea name="body" rows="20" cols="50">{{printf "%s" .Body}}</textarea>
+	</div>
+	<div>
+		<input type="submit" value="Сохранить">
+	</div>
+</form>
